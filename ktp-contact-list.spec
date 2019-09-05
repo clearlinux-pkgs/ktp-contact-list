@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xDBD2CE893E2D1C87 (cfeck@kde.org)
 #
 Name     : ktp-contact-list
-Version  : 19.08.0
-Release  : 5
-URL      : https://download.kde.org/stable/applications/19.08.0/src/ktp-contact-list-19.08.0.tar.xz
-Source0  : https://download.kde.org/stable/applications/19.08.0/src/ktp-contact-list-19.08.0.tar.xz
-Source1 : https://download.kde.org/stable/applications/19.08.0/src/ktp-contact-list-19.08.0.tar.xz.sig
+Version  : 19.08.1
+Release  : 6
+URL      : https://download.kde.org/stable/applications/19.08.1/src/ktp-contact-list-19.08.1.tar.xz
+Source0  : https://download.kde.org/stable/applications/19.08.1/src/ktp-contact-list-19.08.1.tar.xz
+Source1 : https://download.kde.org/stable/applications/19.08.1/src/ktp-contact-list-19.08.1.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0
@@ -62,14 +62,14 @@ locales components for the ktp-contact-list package.
 
 
 %prep
-%setup -q -n ktp-contact-list-19.08.0
+%setup -q -n ktp-contact-list-19.08.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1565910037
+export SOURCE_DATE_EPOCH=1567711655
 mkdir -p clr-build
 pushd clr-build
 # -Werror is for werrorists
@@ -86,7 +86,7 @@ make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1565910037
+export SOURCE_DATE_EPOCH=1567711655
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ktp-contact-list
 cp COPYING %{buildroot}/usr/share/package-licenses/ktp-contact-list/COPYING
